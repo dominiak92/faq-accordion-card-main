@@ -1,0 +1,283 @@
+/* font-family: 'Kumbh Sans', sans-serif; */
+:root{
+    --image-width: 62vw;
+    --font: 'Kumbh Sans', sans-serif;
+    --color-dark: hsl(240, 6%, 50%);
+    --color-veryDark: hsl(237, 12%, 33%)
+}
+html{
+    max-height: 230vw;
+}
+body {
+    min-height: 230vw;
+    background: rgb(101,101,231);
+    background: linear-gradient(0deg, rgba(101,101,231,1) 0%, rgba(175,103,224,1) 50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: var(--font);
+}
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-radius: 1.25em;
+    width: 87vw;
+    min-height: 143vw;
+    background-color: #fff;
+    position: absolute;
+    top: 39vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-box-shadow: 14px 48px 60px -36px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 14px 48px 60px -36px rgba(66, 68, 90, 1);
+    box-shadow: 14px 48px 60px -36px rgba(66, 68, 90, 1);
+}
+.mobilepic{
+    position: absolute;
+    width: var(--image-width);
+    transform: translateY(-28vw);
+    top: 0;
+
+}
+.square{
+    display:none;
+}
+.shadow {
+    position:absolute;
+    top:0;
+    width: var(--image-width);
+}
+.img-mobile {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    width:  var(--image-width);
+    height: 30vw;
+    margin: auto;
+}
+.img-desktop {
+    display:none;
+}
+.title{
+    position: relative;
+    top:-12vw;
+    left: 28.5vw;
+    right: 0;
+    font-family: var(--font);
+    font-weight: 700;
+    transform: translateY(0%);
+    font-size: 8.5vw;
+    margin-top: 22vw;
+    z-index: 1;
+}
+/* -----QUESTIONS AND ANSWERS----- */
+.faq-wrapper{
+    margin-top: 12vw;
+    box-sizing:border-box;
+    padding: 6.2vw;
+    padding-bottom: 2vw;
+}
+.faq-container{
+    max-width: 80vw;
+    margin-bottom: 1vw;
+    margin-top: 0vw;
+    padding-bottom: 4vw;
+    padding-top: 4vw;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    cursor: pointer;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.answer p{
+    font-size: 3vw;
+    line-height: 4vw;
+    margin-top: 3vw;
+    color: var(--color-dark)
+}
+.faq-container.active .answer {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+
+}
+.faq-container.active img{
+    transform: rotate(180deg);
+}
+.faq-container.active .question {
+font-weight: 700;
+}
+
+.faq-container:hover .arrow{
+    transform: rotate(90deg);
+}
+.arrow {
+    transition: transform 0.4s ease-in;
+    width: 2.5vw;
+    height: 1.5vw;
+}
+.question {
+display:flex;
+width: auto;
+/* border: 1px solid; */
+align-items: center;
+justify-content: space-between;
+}
+.question h3{
+    font-size: 3.7vw;
+    color: var(--color-veryDark)
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+/* -----QUESTIONS AND ANSWERS----- */
+/* -----MEDIA QUERIES 992px----- */
+@media(min-width: 992px){
+    :root{
+        --image-width: 32.2vw;
+        --font: 'Kumbh Sans', sans-serif;
+        --color-dark: hsl(240, 6%, 50%);
+        --color-veryDark: hsl(237, 12%, 33%)
+    }
+    html{
+        max-height: 100vw;
+    }
+    body {
+        min-height: 100vh;
+        background: rgb(101,101,231);
+background: linear-gradient(0deg, rgba(101,101,231,1) 45%, rgba(175,103,224,1) 100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: var(--font);
+    }
+.grandwrapper{
+    position:relative;
+}
+    .wrapper{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        border-radius: 1.25em;
+        width: 64vw;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 54vw;
+        background-position-x: -27vw;
+        background-position-y: -12vw;
+        min-height: 35.6vw;
+        transform: translateY(10%);
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        -webkit-box-shadow: 14px 48px 60px -36px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 14px 48px 60px -36px rgba(66, 68, 90, 1);
+        box-shadow: 14px 48px 60px -36px rgba(66, 68, 90, 1);
+    }
+    /* DESKTOP IMAGE */
+    .desktoppic{
+        position: relative;
+        width: var(--image-width);
+        transform: translateY(2.5vw);
+        left: -5vw;
+        right: 0;
+    
+    }
+    .shadow {
+    display:none;
+    }
+    .img-mobile {
+        display:none;
+    }
+    .img-desktop {
+        display:block;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 20vh;
+        width:  38.8vw;
+        height: 30vw;
+        margin: 0;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .shadowdesktop {
+        position:relative;
+        top: -16vw;
+        left: -28vw;
+        right: 0;
+        height: 55.5vw;
+        width: 55vw;
+    }
+    .square{
+        display:block;
+        position:fixed;
+        width: 12.7vw;
+        height: 12.7vw;
+        top: 41%;
+        left: -10%;
+        right: 0;
+        z-index: 1;
+    }
+    .title{
+        position: relative;
+        top: 0vw;
+        left: 0vw;
+        right: 0;
+        font-family: var(--font);
+        font-weight: 700;
+        transform: translateY(-60%);
+        font-size: 2.3vw;
+        margin-top: 1vw;
+        z-index: 1;
+    }
+    /* -----QUESTIONS AND ANSWERS----- */
+.faq-wrapper{
+    margin-top: 0vw;
+    box-sizing:border-box;
+    padding: 0.8vw;
+    padding-bottom: 0.4vw;
+    padding-right: 7.7vw;
+    flex-shrink: 3;
+}
+.faq-container{
+    max-width: 80vw;
+    margin-bottom: 0vw;
+    margin-top: 0vw;
+    padding-bottom: 1.5vw;
+    padding-top: 1.1vw;
+}
+.answer p{
+    font-size: 0.84vw;
+    line-height: 1.2vw;
+    margin-top: 1vw;
+    color: var(--color-dark)
+}
+.arrow {
+    width: 0.7vw;
+    height: 0.5vw;
+}
+
+.question h3{
+    font-size: 1vw;
+    color: var(--color-veryDark);
+    transition: 0.2s;
+}
+.question:hover h3 {
+    color: rgba(255,146,113,255)
+}
+}
